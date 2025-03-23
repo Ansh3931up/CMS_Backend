@@ -19,7 +19,7 @@ connectDB();
 // Middleware
 app.use(helmet());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://neuracampus.vercel.app',
     credentials: true
 }));
 app.use(compression());
