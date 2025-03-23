@@ -9,6 +9,7 @@ import studentRoutes from './student.js';
 import recruiterRoutes from './recruiter.js';
 import batchTransitionRoutes from './batchTransition.js';
 import invitationTemplateRoutes from './invitationTemplate.js';
+import questionnaireRoutes from './questionnaire.js';
 
 const router = express.Router();
 
@@ -28,5 +29,6 @@ router.use('/recruiter', recruiterRoutes);
 // Feature-specific routes
 router.use('/batch-transition', batchTransitionRoutes);
 router.use('/invitation-template', invitationTemplateRoutes);
+router.use('/questionnaire', questionnaireRoutes);
 
 export default router; 
