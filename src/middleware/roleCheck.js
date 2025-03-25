@@ -5,7 +5,7 @@ export const isSuperAdmin = async (req, res, next) => {
     try {
         const user = await User.findById(req.user.userId);
         console.log("user", user);
-        const allowedRoles = ['super_admin'];
+        const allowedRoles = ['superadmin'];
         if (!allowedRoles.includes(user.role)) {
             return res.status(403).json({ message: 'Access denied. Super Admin only.' });
         }

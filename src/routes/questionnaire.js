@@ -15,7 +15,7 @@ const {
 router.post('/', submitQuestionnaire);
 
 // Protected routes (admin only)
-router.get('/', verifyToken, isSuperAdmin, getQuestionnaires);
+router.get('/', verifyToken,  isSuperAdmin, getQuestionnaires);
 router.get('/export', verifyToken, isSuperAdmin, exportToExcel);
 
 export default router; 

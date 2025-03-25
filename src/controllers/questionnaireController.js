@@ -1,7 +1,12 @@
 import Questionnaire from '../models/Questionnaire.js';
 import excelService from '../services/excelService.js';
 import { sendEmail } from '../utils/emailService.js';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 import fs from 'fs';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const submitQuestionnaire = async (req, res) => {
   try {
